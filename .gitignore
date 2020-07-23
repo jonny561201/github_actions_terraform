@@ -1,0 +1,9 @@
+*.zip
+.idea
+.terraform
+keys.json
+*/venv
+*.iml
+plan.prod
+plan.pilot
+*__pycache__
