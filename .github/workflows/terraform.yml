@@ -41,6 +41,9 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: cd deployments && terraform init
+      
+    - name: Where are we now!
+      run: pwd
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
