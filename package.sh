@@ -15,7 +15,9 @@ function zipFiles {
     powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('${ZIP_DIR}', '${ZIP_DIR}.zip'); }"
   else
     echo -e "${YELLOW}----------Linux Bash Zip----------${WHITE}"
-    zip -r ${ZIP_DIR}.zip ./${ZIP_DIR}/
+    cd ${ZIP_DIR}
+    zip -r ../${ZIP_DIR}.zip
+    cd ../
   fi
 }
 
