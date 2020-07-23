@@ -17,6 +17,7 @@ function zipFiles {
     echo -e "${YELLOW}----------Linux Bash Zip----------${WHITE}"
     cd ${ZIP_DIR}
     zip -r ../${ZIP_DIR}.zip
+    mv ${ZIP_DIR}.zip ../
     cd ../
   fi
 }
